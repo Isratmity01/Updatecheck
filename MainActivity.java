@@ -23,13 +23,13 @@ Button button;
             public void onClick(View v) {
                 UpdateApp atualizaApp = new UpdateApp();
                 atualizaApp.setContext(getApplicationContext());
-                atualizaApp.execute("http://www.kolorob.net/kolorob.apk");//change the address of the apk
+                atualizaApp.execute("http://www.kolorob.net/trial.apk");//change the address of the apk
 
 
 
                 File sdCard = Environment.getExternalStorageDirectory();
                 String fileStr = sdCard.getAbsolutePath() + "/Download";// + "app-release.apk";
-                File file = new File(fileStr, "kolorob.apk");//change the name
+                File file = new File(fileStr, "trial.apk");//change the name
                 Intent promptInstall = new Intent(Intent.ACTION_VIEW).setDataAndType(Uri.fromFile(file),
                         "application/vnd.android.package-archive");
 
